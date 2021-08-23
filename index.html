@@ -1,0 +1,62 @@
+<html>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.26/Tone.js"></script>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <style></style>
+  <body>
+    <script>
+      //   var synth = new Tone.Synth().toDestination();
+      function col() {
+        var hexValues = [
+          "0",
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9",
+          "a",
+          "b",
+          "c",
+          "d",
+          "e",
+        ];
+        var newColor = "#";
+
+        for (var i = 0; i < 6; i++) {
+          var x = Math.round(Math.random() * 14);
+          var y = hexValues[x];
+          newColor += y;
+        }
+        return newColor;
+      }
+
+      document.addEventListener("keydown", () => {
+        document.body.style.backgroundColor = col();
+        const n = `${["C", "E", "G"][Math.round(Math.random() * 2)]}${
+          Math.round(Math.random() * 2) + 2
+        }`;
+
+        // synth.triggerAttackRelease(n, "8n");
+      });
+
+      document.addEventListener(
+        "keypress",
+        (event) => {
+          var name = event.key;
+          var code = event.code.substr(event.code.length - 1, 1);
+          document.querySelector("#keyboard-out").innerHTML = code;
+          let utterance = new SpeechSynthesisUtterance(code);
+          window.speechSynthesis.speak(utterance);
+        },
+        false
+      );
+    </script>
+
+    <div id="keyboard-out"></div>
+  </body>
+</html>
