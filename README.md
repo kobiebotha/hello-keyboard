@@ -1,6 +1,6 @@
 # hello-keyboard
 
-This is an app for your toddler to teach themself how to use a keyboard.
+This is an app for your toddler to familiarize them with computer keyboards :-) 
 
 Requirements:
 
@@ -14,3 +14,5 @@ serve locally
 TODO:
 
 - Voice selection
+- Special characters
+- Mouse control
