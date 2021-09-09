@@ -35,7 +35,15 @@ document.addEventListener('keydown', (event) => {
   document.querySelector("#keyboard-out").innerHTML = key;
 
   //FIXME: hack. doesn't work with some characters
-  new Audio(`../audio/${key.toLowerCase()}.mp3`).play()
+
+  switch (key) {
+    case '`':
+      new Audio(`../audio/backtick.mp3`).play()
+      break;
+    default:
+      new Audio(`../audio/${key.toLowerCase()}.mp3`).play()
+  }
+
 
   //random synth frequency
   const n = `${['C', 'E', 'G'][Math.round(Math.random() * 2)]}${Math.round(Math.random() * 2) + 2
