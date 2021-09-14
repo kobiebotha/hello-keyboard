@@ -38,11 +38,14 @@ document.addEventListener('keydown', (event) => {
 
   switch (key) {
     case '`':
-      new Audio(`../audio/backtick.mp3`).play()
+      new Audio(`../audio/backtick.mp3`).play();
+      break;
     case ' ':
-      new Audio('../audio/spacebar.mp3').play()
+      new Audio('../audio/spacebar.mp3').play();
+      break;
     case '.':
-      new Audio('../audio/period.mp3').play()
+      new Audio('../audio/period.mp3').play();
+      break;
     default:
       new Audio(`../audio/${key.toLowerCase()}.mp3`).play()
   }
