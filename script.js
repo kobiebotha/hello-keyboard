@@ -49,6 +49,9 @@ document.addEventListener('keydown', (event) => {
     case '/':
       new Audio('../audio/fslash.mp3').play();
       break;
+    case '\\':
+      new Audio('../audio/bslash.mp3').play();
+      break;
     case '*':
       new Audio('../audio/asterisk.mp3').play();
       break;
