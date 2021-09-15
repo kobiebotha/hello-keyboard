@@ -49,6 +49,9 @@ document.addEventListener('keydown', (event) => {
     case '/':
       new Audio('../audio/fslash.mp3').play();
       break;
+    case '*':
+      new Audio('../audio/asterisk.mp3').play();
+      break;
     default:
       new Audio(`../audio/${key.toLowerCase()}.mp3`).play()
   }
