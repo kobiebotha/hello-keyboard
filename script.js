@@ -55,6 +55,19 @@ document.addEventListener('keydown', (event) => {
     case '*':
       new Audio('../audio/asterisk.mp3').play();
       break;
+    case 'ArrowDown':
+      new Audio('../audio/DownArrow.mp3').play();
+      break;
+    case 'ArrowUp':
+      new Audio('../audio/UpArrow.mp3').play();
+      break;
+    case 'ArrowLeft':
+      new Audio('../audio/LeftArrow.mp3').play();
+      break;
+    case 'ArrowRight':
+      new Audio('../audio/RightArrow.mp3').play();
+      break;
+
     default:
       new Audio(`../audio/${key.toLowerCase()}.mp3`).play()
   }
