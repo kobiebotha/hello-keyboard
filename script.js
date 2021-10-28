@@ -67,7 +67,9 @@ document.addEventListener('keydown', (event) => {
     case 'ArrowRight':
       new Audio('../audio/RightArrow.mp3').play();
       break;
-
+    case 'Help':
+      new Audio('../audio/Help.mp3').play();
+      break;
     default:
       new Audio(`../audio/${key.toLowerCase()}.mp3`).play()
   }
